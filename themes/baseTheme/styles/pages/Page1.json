@@ -39,6 +39,10 @@
       },
       "height": null,
       "width": null
+    },
+    "&-scrollView1": {
+      "width": 395.52,
+      "height": 644.78
     }
   }
 }

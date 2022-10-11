@@ -95,5 +95,35 @@
     "flexProps": {
       "justifyContent": "CENTER"
     }
+  },
+  ".lbl": {
+    "flexProps": {
+      "alignSelf": "AUTO"
+    },
+    "textAlignment": "MIDCENTER"
+  },
+  ".slide": {
+    "flexProps": {
+      "flexGrow": 1,
+      "alignSelf": "STRETCH"
+    },
+    "layout": {
+      "paddingTop": 10,
+      "height": 600,
+      "flexProps": {
+        "justifyContent": "SPACE_EVENLY",
+        "flexDirection": "COLUMN",
+        "direction": "INHERIT",
+        "alignContent": "STRETCH"
+      }
+    },
+    "marginTop": 10
+  },
+  ".header": {
+    "itemColor": "rgba( 255, 255, 255, 0 )",
+    "titleColor": "rgba( 0, 0, 0, 1 )",
+    "transparent": false,
+    "backgroundColor": "rgba( 255, 255, 255, 0 )",
+    "backgroundImage": "smartface.png"
   }
 }

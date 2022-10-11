@@ -8,8 +8,8 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
-					"58c0-c2a0-1c02-c1c9",
-					"9e49-7873-afba-472b"
+					"eb1c-b29d-1953-2538",
+					"58c0-c2a0-1c02-c1c9"
 				],
 				"isRemovable": true,
 				"name": "page1",
@@ -22,8 +22,7 @@
 				"orientation": "PORTRAIT",
 				"safeAreaEnabled": true
 			},
-			"version": "6.15.1",
-			"degree": 0
+			"version": "6.15.1"
 		},
 		{
 			"className": ".sf-statusBar",
@@ -35,24 +34,34 @@
 				"parent": "e891b86d"
 			},
 			"type": "StatusBar",
-			"userProps": {},
-			"degree": 1
+			"userProps": {}
 		},
 		{
-			"className": ".sf-headerBar",
+			"className": ".sf-headerBar .header",
 			"id": "b7d28cff",
 			"props": {
 				"children": [],
 				"isRemovable": false,
 				"name": "headerBar",
-				"parent": "e891b86d",
-				"title": "Page1"
+				"parent": "e891b86d"
 			},
 			"type": "HeaderBar",
-			"userProps": {
-				"title": "Page1"
+			"userProps": {}
+		},
+		{
+			"className": ".sf-label .lbl",
+			"id": "eb1c-b29d-1953-2538",
+			"oldName": "label1",
+			"props": {
+				"children": [],
+				"name": "lbl1",
+				"parent": "e891b86d",
+				"text": "Change Header Bar"
 			},
-			"degree": 1
+			"type": "Label",
+			"userProps": {
+				"text": "Change Header Bar"
+			}
 		},
 		{
 			"className": ".sf-flexLayout #page1-wrapper",
@@ -60,54 +69,156 @@
 			"oldName": "flexLayout1",
 			"props": {
 				"children": [
-					"aa54-c8cf-0db8-a806"
+					"a7d4-50c3-110f-36b0"
 				],
 				"name": "flWrapper",
 				"parent": "e891b86d"
 			},
 			"type": "FlexLayout",
-			"userProps": {},
-			"degree": 1
+			"userProps": {}
 		},
 		{
-			"className": ".sf-button #page1-btnNext",
-			"id": "9e49-7873-afba-472b",
+			"className": ".sf-scrollView .slide",
+			"id": "a7d4-50c3-110f-36b0",
 			"props": {
-				"autoHeight": 50.561797752808985,
+				"autoSizeEnabled": false,
+				"children": [
+					"cb91-3bd9-00df-7dfd",
+					"ee67-be12-7b0e-1a6e",
+					"ea76-b644-ef6e-3b0a",
+					"d45f-321d-8e9a-2798",
+					"9106-be28-a52a-6510",
+					"5fff-6bf9-38b5-f7d9",
+					"b580-218a-53b4-7c03",
+					"632b-da43-5ec6-99a3"
+				],
+				"name": "scrollView1",
+				"parent": "58c0-c2a0-1c02-c1c9"
+			},
+			"type": "ScrollView",
+			"userProps": {
+				"autoSizeEnabled": false
+			}
+		},
+		{
+			"className": ".sf-button .trans",
+			"id": "cb91-3bd9-00df-7dfd",
+			"oldName": "button1",
+			"props": {
 				"children": [],
-				"name": "btnNext",
-				"parent": "e891b86d",
-				"text": "Next Page",
-				"usePageVariable": true
+				"name": "btnTrans",
+				"parent": "a7d4-50c3-110f-36b0",
+				"text": "Transparent"
 			},
 			"type": "Button",
 			"userProps": {
-				"autoHeight": 50.561797752808985,
-				"testId": "93f6-Tngc",
-				"text": "Next Page",
-				"usePageVariable": true
-			},
-			"degree": 1
+				"text": "Transparent"
+			}
 		},
 		{
-			"className": ".sf-label #page1-lbl",
-			"id": "aa54-c8cf-0db8-a806",
+			"className": ".sf-button .translucent",
+			"id": "ee67-be12-7b0e-1a6e",
+			"oldName": "button1_1",
 			"props": {
-				"autoHeight": 39.325842696629216,
 				"children": [],
-				"name": "lbl",
-				"parent": "58c0-c2a0-1c02-c1c9",
-				"text": "Page1",
-				"usePageVariable": true
+				"name": "btnTranslucent",
+				"parent": "a7d4-50c3-110f-36b0",
+				"text": "Translucent"
 			},
-			"type": "Label",
+			"type": "Button",
 			"userProps": {
-				"autoHeight": 39.325842696629216,
-				"text": "Page1",
-				"usePageVariable": true,
-				"testId": "_tdYNDkDX"
+				"text": "Translucent"
+			}
+		},
+		{
+			"className": ".sf-button .red",
+			"id": "ea76-b644-ef6e-3b0a",
+			"oldName": "button1_2",
+			"props": {
+				"children": [],
+				"name": "btnRed",
+				"parent": "a7d4-50c3-110f-36b0",
+				"text": "Change Color Red"
 			},
-			"degree": 2
+			"type": "Button",
+			"userProps": {
+				"text": "Change Color Red"
+			}
+		},
+		{
+			"className": ".sf-button .blue",
+			"id": "d45f-321d-8e9a-2798",
+			"oldName": "button1_3",
+			"props": {
+				"children": [],
+				"name": "btnBlue",
+				"parent": "a7d4-50c3-110f-36b0",
+				"text": "Change Color Blue"
+			},
+			"type": "Button",
+			"userProps": {
+				"text": "Change Color Blue"
+			}
+		},
+		{
+			"className": ".sf-button .green",
+			"id": "9106-be28-a52a-6510",
+			"oldName": "button1_4",
+			"props": {
+				"children": [],
+				"name": "btnGreen",
+				"parent": "a7d4-50c3-110f-36b0",
+				"text": "Change Color Green"
+			},
+			"type": "Button",
+			"userProps": {
+				"text": "Change Color Green"
+			}
+		},
+		{
+			"className": ".sf-button .black",
+			"id": "5fff-6bf9-38b5-f7d9",
+			"oldName": "button1_5",
+			"props": {
+				"children": [],
+				"name": "btnBlack",
+				"parent": "a7d4-50c3-110f-36b0",
+				"text": "Change Color White"
+			},
+			"type": "Button",
+			"userProps": {
+				"text": "Change Color White"
+			}
+		},
+		{
+			"className": ".sf-button .mage",
+			"id": "b580-218a-53b4-7c03",
+			"oldName": "btnBlack_1",
+			"props": {
+				"children": [],
+				"name": "btnImage",
+				"parent": "a7d4-50c3-110f-36b0",
+				"text": "Load SmartFace Image"
+			},
+			"type": "Button",
+			"userProps": {
+				"text": "Load SmartFace Image"
+			}
+		},
+		{
+			"className": ".sf-button",
+			"id": "632b-da43-5ec6-99a3",
+			"oldName": "button1",
+			"props": {
+				"children": [],
+				"name": "btnNext",
+				"parent": "a7d4-50c3-110f-36b0",
+				"text": "Next Page"
+			},
+			"type": "Button",
+			"userProps": {
+				"text": "Next Page"
+			}
 		}
 	]
 }

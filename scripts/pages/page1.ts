@@ -3,6 +3,9 @@ import Label from '@smartface/native/ui/label';
 import { Route, Router } from '@smartface/router';
 import { styleableComponentMixin } from '@smartface/styling-context';
 import { i18n } from '@smartface/i18n';
+import Color from '@smartface/native/ui/color';
+import Page from '@smartface/native/ui/page';
+import System from '@smartface/native/device/system';
 
 class StyleableLabel extends styleableComponentMixin(Label) {}
 
@@ -12,13 +15,8 @@ export default class Page1 extends Page1Design {
   constructor(private router?: Router, private route?: Route) {
     super({});
     this.lbl = new StyleableLabel();
-    console.log('[page1] constructor');
   }
 
-  setTexts() {
-    this.btnNext.text = i18n.instance.t('nextPage');
-    this.lbl.text = i18n.instance.t('runtimeLabel');
-  }
 
   /**
    * @event onShow
@@ -27,11 +25,7 @@ export default class Page1 extends Page1Design {
   onShow() {
     super.onShow();
     console.log('[page1] onShow');
-    this.disposeables.push(
-      this.btnNext.on('press', () => {
-        this.router.push('page2', { message: i18n.instance.t('helloWorld') });
-      })
-    );
+   
   }
   /**
    * @event onLoad
@@ -39,19 +33,44 @@ export default class Page1 extends Page1Design {
    */
   onLoad() {
     super.onLoad();
-    this.setTexts();
+    const { headerBar } = System.OS === System.OSType.ANDROID ? this : this.parentController;
+
     console.log('[page1] onLoad');
-    this.headerBar.leftItemEnabled = false;
-    this.addChild(this.lbl, 'page1lbl1unique', 'sf-label', (userProps: Record<string, any>) => {
-      return { ...userProps };
+    this.btnTrans.on("press", ()=>{
+        console.log("transparent clicked");
+        //this.headerBar.transparent = true;
+        this.headerBar.backgroundColor = Color.TRANSPARENT;
+        this.headerBar.title = "HeaderBar Transparent";
+       
     });
-  }
+    this.btnTranslucent.on("press", ()=>{
+        
+    });
+    this.btnRed.on("press", ()=>{
+        this.headerBar.transparent = false;
+        this.headerBar.backgroundColor = Color.RED;
+        this.headerBar.title = "HeaderBar Red";
+    });
+    this.btnGreen.on("press", ()=>{
+        this.headerBar.backgroundColor = Color.GREEN;
+        this.headerBar.title = "HeaderBar Green";
 
-  onHide(): void {
-    this.dispose();
-  }
+    });
+    this.btnBlue.on("press", ()=>{
+        this.headerBar.backgroundColor = Color.BLUE;
+        this.headerBar.title = "HeaderBar Blue";
 
-  dispose(): void {
-    this.disposeables.forEach((item) => item());
+    });
+    this.btnBlack.on("press", ()=>{
+        this.headerBar.backgroundColor = Color.WHITE;
+        this.headerBar.title = "HeaderBar White";
+
+    });
+    this.btnImage.on("press", ()=>{
+        this.headerBar.backgroundImage = 'images://smartface.png';
+    });
+    this.btnNext.on("press", ()=>{
+        this.router.push('page2');
+    })
   }
 }

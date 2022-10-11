@@ -2,7 +2,6 @@
   ".sf-headerBar": {
     "masksToBounds": true,
     "visible": true,
-    "transparent": false,
     "backgroundColor": "${mainColor}",
     "titleColor": "${white}",
     "itemColor": "${white}"
